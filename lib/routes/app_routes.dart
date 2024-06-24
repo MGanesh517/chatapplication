@@ -6,15 +6,15 @@ part of 'app_pages.dart';
   // LOGIN WORKFLOW ROUTES
 
   static const loginSignup = '/LoginSignup';
-  // static const companySplash = '/companySplash';
-  // static const dashboardView = '/dashboardView';
-  // static const ledgerStatementEntry = '/ledgerStatementEntry';
-  // static const ledgerStatementIndetail = '/ledgerStatementIndetail';
-  // static const ledgerStatementOverview = '/ledgerStatementOverview';
-  // static const accountEntry = '/accountEntry';
-  // static const accountIndetail = '/accountIndetail';
-  // static const accountOverview = '/accountOverview';
-  // static const itemEntry = '/itemEntry';
+  static const createAccount = '/createAccount';
+  static const loginAndCreate = '/loginAndCreate';
+  static const bottomNav = '/bottomNav';
+  static const messageScreen = '/messageScreen';
+  static const callScreen = '/callScreen';
+  static const contactScreen = '/contactScreen';
+  static const settingScreen = '/settingScreen';
+  static const chatCard = '/chatCard';
+  static const chatPage = '/chatPage';
   // static const itemIndetail = '/itemIndetail';
   // static const itemOverview = '/itemOverview';
   // static const vendorBillsEntry = '/vendorBillsEntry';

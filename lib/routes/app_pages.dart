@@ -1,11 +1,20 @@
 import 'package:get/get.dart';
+import 'package:my_project/Screens/Calls/call_screen.dart';
+import 'package:my_project/Screens/Contacts/contact_screen.dart';
+import 'package:my_project/Screens/Messages/chat_screen.dart';
+import 'package:my_project/Screens/Messages/message_screen.dart';
+import 'package:my_project/Screens/Settings/setting_screen.dart';
+import 'package:my_project/Screens/bottom_nav.dart';
+import 'package:my_project/illustrations/Login%20Screens/create_account.dart';
+import 'package:my_project/illustrations/Login%20Screens/login_and_create.dart';
 import 'package:my_project/illustrations/Login%20Screens/login_signup.dart';
+import 'package:my_project/waste.dart';
 
 part 'app_routes.dart';
 
 
 
- class AppPages {
+class AppPages {
   static final pages = [
     GetPage(
       name: Routes.loginSignup,
@@ -14,60 +23,60 @@ part 'app_routes.dart';
       transitionDuration: const Duration(milliseconds: 300),
       // binding: LoginBinding(),
     ),
-    // GetPage(
-    //   name: Routes.companySplash,
-    //   page: () => const CompanySplash(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.dashboardView,
-    //   page: () => const MyHomePage(currentIndex: 0,),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.ledgerStatementEntry,
-    //   page: () =>  const LedgerEntry(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.ledgerStatementIndetail,
-    //   page: () =>   const LedgerDetails(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.ledgerStatementOverview,
-    //   page: () =>  const LedgerOverview(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.accountEntry,
-    //   page: () => const AccountEntry(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.accountIndetail,
-    //   page: () => const AccountIndetail(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.accountOverview,
-    //   page: () => const AccountOverview(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
-    // GetPage(
-    //   name: Routes.itemEntry,
-    //   page: () =>  ItemEntry(),
-    //   transition: Transition.rightToLeft,
-    //   transitionDuration: const Duration(milliseconds: 300),
-    // ),
+    GetPage(
+      name: Routes.createAccount,
+      page: () => const CreateAccount(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.loginAndCreate,
+      page: () => const LoginAndCreate(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.bottomNav,
+      page: () =>  const BottomNav(currentIndex: 0),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.messageScreen,
+      page: () =>   const MessageScreen(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.callScreen,
+      page: () =>  const CallScreen(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.contactScreen,
+      page: () => const ContactScreen(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.settingScreen,
+      page: () => const SettingScreen(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.chatCard,
+      page: () => const ChartCard(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
+    GetPage(
+      name: Routes.chatPage,
+      page: () =>  const ChatPage(),
+      transition: Transition.rightToLeft,
+      transitionDuration: const Duration(milliseconds: 300),
+    ),
     // GetPage(
     //   name: Routes.itemIndetail,
     //   page: () =>  const ItemIndetail(),

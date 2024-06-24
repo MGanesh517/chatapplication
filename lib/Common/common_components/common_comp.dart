@@ -135,7 +135,7 @@ class CommonComponents {
           keyboardType: keyboardType,
           autovalidateMode: AutovalidateMode.onUserInteraction,
           inputFormatters: inputFormatters ?? <TextInputFormatter>[],
-          cursorColor: color,
+          cursorColor: Colors.blue,
           style: TextStyle(color: color ?? Colors.black , fontWeight: FontWeight.w400,fontSize: 15),
           decoration: InputDecoration(
               contentPadding: const EdgeInsets.all(10),

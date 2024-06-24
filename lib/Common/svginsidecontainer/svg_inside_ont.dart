@@ -25,3 +25,38 @@ class CircularContainerWithSVG extends StatelessWidget {
     );
   }
 }
+
+
+
+class StoryAvator extends StatelessWidget {
+  final String firstImage;
+  final double height;
+  final double width;
+
+
+  const StoryAvator({super.key,
+  required this.firstImage,
+  required this.height,
+  required this.width
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: height,
+      height: width,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        border: Border.all(color: Colors.yellow),
+      ),
+      child: Center(
+        child: Image.asset(
+          firstImage,
+          height: height,
+          width: width,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+}

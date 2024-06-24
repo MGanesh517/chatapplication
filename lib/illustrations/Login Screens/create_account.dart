@@ -5,14 +5,14 @@ import 'package:my_project/Common/custom_appbar/custom_appbar.dart';
 import 'package:my_project/Common/svginsidecontainer/svg_inside_ont.dart';
 import 'package:my_project/routes/app_pages.dart';
 
-class LoginSignup extends StatefulWidget {
-  const LoginSignup({super.key});
+class CreateAccount extends StatefulWidget {
+  const CreateAccount({super.key});
 
   @override
-  State<LoginSignup> createState() => _LoginSignupState();
+  State<CreateAccount> createState() => _CreateAccountState();
 }
 
-class _LoginSignupState extends State<LoginSignup> {
+class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class _LoginSignupState extends State<LoginSignup> {
                       children: [
                         Container(height: 60),
                         const Text(
-                          "Login to ChatBox",
+                          "Sign up To Email",
                           style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w700,
@@ -45,7 +45,7 @@ class _LoginSignupState extends State<LoginSignup> {
                         ),
                         const Center(
                           child: Text(
-                            "Welcome back! Sign in using your social account or email to continue us",
+                            "Get chatting with friends and family today by signing up for our chat app!",
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontSize: 15,
@@ -91,6 +91,19 @@ class _LoginSignupState extends State<LoginSignup> {
                         const SizedBox(height: 30),
                         CommonComponents.defaultTextField(
                           context,
+                          title: 'Your Name',
+                          onChange: (value) {},
+                          validator: (val) {
+                            if (val == '') {
+                              return 'Name is required';
+                            } else {
+                              return null;
+                            }
+                          },
+                          hintText: 'Enter Name',
+                        ),
+                        CommonComponents.defaultTextField(
+                          context,
                           title: 'Your Email',
                           onChange: (value) {},
                           validator: (val) {
@@ -115,66 +128,54 @@ class _LoginSignupState extends State<LoginSignup> {
                           },
                           hintText: 'Enter Password',
                         ),
-                        Container(height: 100,)
+                        CommonComponents.defaultTextField(
+                          context,
+                          title: 'Confirm Password',
+                          onChange: (value) {},
+                          validator: (val) {
+                            if (val == '') {
+                              return 'Confirm Password is required';
+                            } else {
+                              return null;
+                            }
+                          },
+                          hintText: 'Enter  Confirm Password',
+                        ),
+                        Container(height: 70,)
                       ],
                     ),
                   ),
                 ),
                 Positioned(
-                  bottom: 0,
+                  bottom: 10,
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
                     child: Padding(
-                      padding: const EdgeInsets.only(left:15,right: 15),
-                      child: Column(
-                        children: [
-                          MaterialButton(
-                            onPressed: () {
-                              Get.toNamed(Routes.createAccount);
-                            },
-                            height: 48,
-                            minWidth: MediaQuery.of(context).size.width,
+                      padding: const EdgeInsets.all(20),
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
                             shape: const RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(16))),
-                            color: const Color(0xff24786D),
-                            child: const Center(
-                              child: Text(
-                                "Login",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ),
+                            // side: const BorderSide(color: Color(0xff494DA8)),
+                            backgroundColor: const Color(0xff24786D),
+                            minimumSize:
+                                Size(MediaQuery.of(context).size.width, 48)),
+                        onPressed: () {
+                          Get.toNamed(Routes.bottomNav);
+                        },
+                        child: const Text(
+                          "Create an Account",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
                           ),
-                          const SizedBox(height: 10),
-                          OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                                shape: const RoundedRectangleBorder(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(16))),
-                                // side: const BorderSide(color: Color(0xff494DA8)),
-                                minimumSize:
-                                    Size(MediaQuery.of(context).size.width, 48)),
-                            onPressed: () {
-                              Get.toNamed(Routes.messageScreen);
-                            },
-                            child: const Text(
-                              "Forgot Password?",
-                              style: TextStyle(
-                                color: Color(0xff24786D),
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             )));
   }
